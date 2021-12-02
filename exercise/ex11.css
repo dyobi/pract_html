@@ -1,0 +1,41 @@
+html, body {
+    padding: 0px;
+    border: 0px;
+}
+
+div {
+    display: table;
+    width: 100%;
+}
+
+header {
+    color: blue;
+    background-color: yellow;
+    padding: 10px;
+}
+
+nav {
+    display: table-cell;
+    color: red;
+    background-color: pink;
+    width: 20%;
+}
+
+section {
+    display: table-cell;
+    color: yellow;
+    background-color: blue;
+    width: 70%;
+}
+
+aside {
+    display: table-cell;
+    background-color: cyan;
+    width: 100%;
+}
+
+footer {
+    color: pink;
+    background-color: brown;
+    width: 100%;
+}

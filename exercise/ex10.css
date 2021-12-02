@@ -1,0 +1,14 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#aa {
+    background-size: cover;
+    /* 배경크기를 참조하여 이미지를 확대 또는 축소시 auto는 크기그대로, contain은 배경크기를 참조하되 가로세로비율 맞추어 */
+    background-image: url("https://cdn.pixabay.com/photo/2016/10/21/14/50/plouzane-1758197_1280.jpg");
+    background-position: center;    /*resize시 그림가운데가 보이게*/
+    min-height: 100%;
+    border: 0;
+    padding: 0;
+}

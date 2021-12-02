@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#aa, #bb, #cc {
+    width: 300px;
+    height: 100px;
+    background-color: pink;
+}
+#aa {
+    position: static;
+}
+#bb {
+    position: relative;
+    top: 0px;
+    left: 300px;
+}
+#cc {
+    position: relative;
+    top: 0px;
+    left: 600px;
+}

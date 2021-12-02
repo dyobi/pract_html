@@ -1,0 +1,17 @@
+h1 {
+    color: #26ff6073;
+}
+p {
+    color: rgba(0, 0, 255, 0.293);
+    font-size: 30pt;
+}
+.redred {
+    color: #bd57c8;
+}
+#myid {
+    color: rgba(128, 0, 43, 0.293);
+    font-size: 20pt;
+}
+
+/* 빛의 삼원색 : RGB
+Red : 0-255 (256, 00-FF) */

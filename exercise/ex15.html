@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HELLO</title>
+    <link rel="stylesheet" href="./ex15.css">
+    <script>
+        const kaja = (arg) => arg.style.display = arg.style.display === 'none' ? 'block' : 'none';
+    </script>
+</head>
+
+<body>
+    <div class="menu1" id="bigmenu1" onclick="kaja(document.getElementById('somenu1'))">
+        CEO
+    </div>
+    <div class="menu2" id="somenu1" style="display: none;">
+        <ul>
+            <li><a href="#">CEO소개</a></li>
+            <li><a href="#">CEO인사말</a></li>
+        </ul>
+    </div>
+
+    <div class="menu1" id="bigmenu2" onclick="kaja(document.getElementById('somenu2'))">
+        회사소개및연혁
+    </div>
+    <div class="menu2" id="somenu2" style="display: none;">
+        <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">회사연혁</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

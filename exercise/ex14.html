@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HELLO</title>
+    <script>
+        document.onmousemove = () => {
+            document.getElementById("f1").style.left = event.clientX + "px";
+            document.getElementById("f1").style.top = event.clientY + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <span id="f1" style="position: absolute;">
+        <img src="../img/6.gif" border="0" name="krim">
+    </span>
+</body>
+
+</html>
+
+<!-- 
+
+자바스크립트에서
+1) 내장객체 Date() : 생성 - 사용
+2) 사용자 정의 객체 (개발자가 만들어 사용)
+        class Bang => function Bang : 정의 생성 사용
+3)  브라우저객체 (BOM: browser object model) : 사용
+        window.location="https://www.naver.com"
+
+DOM(Document Object Model)
+=> 자바스크립트에서 모든 태그에 접근이 가능하도록(동적변경) 합시다 (w3c)
+IE : document.all   객체.속성 => 비표준, document.getElementById()
+w3c : document.getElementById() 객체.메소드를 채택 => 표준
+
+ -->

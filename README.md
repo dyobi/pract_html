@@ -1,3 +1,3 @@
-# PRACTICE_HTML
+# PRACTICE HTML&CSS
 
 > HTML5 Language practice using Apache Tomcat

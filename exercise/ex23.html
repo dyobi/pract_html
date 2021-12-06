@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>HELLO</title>
+	<script>
+		const adding = () => {
+			let pic = document.createElement("img");
+			pic.setAttribute("id", "cat");
+			pic.setAttribute("src", "../img/6.gif");
+			pic.setAttribute("width", 150);
+			document.form.appendChild(pic);
+		}, removing = () => {
+			if (document.getElementById("cat")) {
+				let pic = document.getElementById("cat");
+				pic.parentNode.removeChild(pic);
+			}
+		};
+	</script>
+</head>
+
+<body>
+	<form name="form">
+		<img src="../img/6.gif" width=150 onclick="adding()">
+		<img src="../img/6.gif" width=150 onclick="removing()">
+	</form>
+</body>
+
+</html>
+
+<!-- DOM => 접근, 동적변경 -->
+<!-- JQuery -- [client-side javascript framework] -->
+<!-- ex) document.getElementById("aa") ===> $("#aa") -->
+
+<!-- JQuery.com -> [download] -> [download compressed] -> save as a link -->
+<!-- also download uncompressed one -->
+<!-- ex) 3.6.0-min.js and 3.6.0.js	after downloading, check the inside contents using notepad -->

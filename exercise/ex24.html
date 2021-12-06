@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>HELLO</title>
+	<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+	<h1 id=hh1>어서와 JQuery는 처음이지~~</h1>
+	<h3 id=hh2> 음 ~~그래 ~~</h3>
+	<h2 class=hh3>JQuery는 처음일걸~~~</h2>
+	<h1 id=hh5>열심히 배우자~~~</h1>
+
+	<script>
+		$(() => {	//JQuery의 시작	//css() 는 jquery에서 만든 메소드
+			$('*').css('color', 'red');
+			$('#hh2').css('color', 'blue');
+			$('.hh3').css('color', 'green');
+		});
+	</script>
+</body>
+
+</html>

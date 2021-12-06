@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>HELLO</title>
+	<script type="text/javascript"
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ad4697f86be48b4093511019cae7a001"></script>
+</head>
+
+<body>
+	<div id="map" style="width:500px;height:400px;"></div>
+	<script>
+		window.navigator.geolocation.getCurrentPosition(
+			position => {
+				let lat = position.coords.latitude;
+				let long = position.coords.longitude;
+				let mapContainer = document.getElementById("map"),
+					mapOption = {
+						center: new kakao.maps.LatLng(lat, long),
+						level: 3
+					};
+				let map = new kakao.maps.Map(mapContainer, mapOption);
+				let markerPosition = new kakao.maps.LatLng(lat, long);
+				let marker = new kakao.maps.Marker({
+					position: markerPosition
+				});
+				
+				marker.setMap(map);
+				marker.setDraggable(true);
+			}, error => {
+				console.warn(error);
+			}
+		)
+
+		// let mapContainer = document.getElementById("map"),
+		// 	mapOption = {
+		// 		center: new kakao.maps.LatLng(37.5710213, 126.9928249),
+		// 		level: 3
+		// 	};
+		// let map = new kakao.maps.Map(mapContainer, mapOption);
+		// let markerPosition = new kakao.maps.LatLng(37.5710213, 126.9928249);
+		// let marker = new kakao.maps.Marker({
+		// 	position: markerPosition
+		// });
+
+		// marker.setMap(map);
+		// marker.setDraggable(true);
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HELLO</title>
+    <script>
+        // 객체. 속성 = 값 객체.이벤트 = 이벤트 핸들러
+        window.onload = () => kaja();
+        const kaja = () => {
+            // <쿠키형식>
+            // 쿠키명 = 쿠키값; expires = 유효기간
+            // alert(document.cookie)
+            // 쿠키명 = 쿠키값
+
+            if (document.cookie.indexOf("annaeCookie=kongji1") == -1) {
+                window.open("ex19.html", "cookieWin2", "width=370, height=300, top=20, left=350, location=no");
+            }   //window.open(arg1, arg2, arg3)
+        }
+    </script>
+</head>
+
+<body style="background-color: cyan;">
+    <h3>popup창열자</h3>
+    <pre>
+            여기는 본문이 있는 곳으로
+            본문은 말 그대로 본문이다
+        </pre>
+</body>
+
+</html>

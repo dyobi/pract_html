@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset='utf-8'>
+	<title>HELLO</title>
+	<script src='https://code.jquery.com/jquery-3.3.1.js'></script>
+</head>
+
+<body>
+	<img src='../img/coffee.jpg' id='child'>
+
+	<script>
+		$(() => {
+			$('img').attr('width', 100).attr('height', 70);
+
+			setInterval(() => {
+				$('#child').animate({ width: '+=30' }, 1000).animate({ height: '+=20' }, 500);
+			}, 3000);
+		});
+	</script>
+</body>

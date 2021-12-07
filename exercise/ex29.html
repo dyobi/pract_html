@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<title>HELLO</title>
+	<script src='https://code.jquery.com/jquery-3.3.1.js'></script>
+	<script>
+		$(() => {
+			let num = [1, 2, 3, 4];
+
+			$.each(num, (key, value) => {
+				$('#title' + value).click(() => {
+					if ($('#subtitle' + value).is(':hidden'))
+						$('#subtitle' + value).show();
+					else
+						$('#subtitle' + value).hide();
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id='title1'>
+		<h3>영화관으로</h3>
+	</div>
+	<div id='subtitle1' style='display: none'>
+		<ul>
+			<li><a href='#'>영화 제목은</a></li>
+			<li><a href='#'>상영관 안내</a></li>
+		</ul>
+	</div>
+	<div id='title2'>
+		<h3>식당으로</h3>
+	</div>
+	<div id='subtitle2' style='display: none'>
+		<ul>
+			<li><a href='#'>음식 메뉴는</a></li>
+			<li><a href='#'>맛집 안내</a></li>
+		</ul>
+	</div>
+	<div id='title3'>
+		<h3>후식</h3>
+	</div>
+	<div id='subtitle3' style='display: none'>
+		<ul>
+			<li><a href='#'>커피 메뉴는</a></li>
+			<li><a href='#'>차 메뉴는</a></li>
+		</ul>
+	</div>
+	<div id='title4'>
+		<h3>주차</h3>
+	</div>
+	<div id='subtitle4' style='display: none'>
+		<ul>
+			<li><a href='#'>주차장 약도는</a></li>
+			<li><a href='#'>주차요금 안내</a></li>
+		</ul>
+	</div>
+</body>
+
+</html>

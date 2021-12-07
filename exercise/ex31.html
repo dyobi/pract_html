@@ -1,0 +1,68 @@
+<!-- 
+### Ajax (Asynchronous Javascript + xml) : 비동기 통신 ###
+#. 페이지가 바뀜이 없이 서버와 통신
+	(구글맵, 쇼핑몰의 경우 장바구니에 넣을때 해당 페이지 아래부분으로 드래그 하는 경우)
+#. 주로 많이 보는 것이 아이디 중복 체크
+
+#. Ajax가 response 로 취급하는 text, xmls
+-->
+
+<!DOCTYPE html>
+
+<head>
+	<meta charset='utf-8'>
+	<title>HELLO</title>
+	<script>
+		let xhr = null;
+
+		const getXHR = () => {
+			try {
+				if (window.XMLHttpRequest)	// XMLHttpRequest 사용 가능해?
+					return new XMLHttpRequest;	// xhr 객체 생성
+				else if (window.ActiveXObject)	// IE old version? (7, 8)
+					return new ActiveXObject('MSXML2.XMLHTTP');
+				else	// IE 5 version
+					return new ActiveXObject('Microsoft.XMLHTTP');
+			} catch (e) {
+				xhr = null;
+			};
+		};
+
+		const server = () => {
+			xhr = getXHR();
+			xhr.onreadystatechange = callback;
+			xhr.open('get', '../src/kaja.jsp', true);
+			xhr.send(null);
+		};
+
+		const callback = () => {
+			let ta = document.getElementById('ta');
+			switch (xhr.readyState) {
+				case 4:
+					ta.value += '서버에서 다 왔다는\n';
+					if (xhr.status == 200) {
+						ta.value += '정상으로 옴\n';
+						ta.value += xhr.responseText + '\n';
+					} else {
+						ta.value += '에러발생이라는\n';
+						ta.value += xhr.status + '\t' + xhr.statusText + '\n';
+					}
+					break;
+			}
+		};
+
+		const clear = () => {
+			let ta = document.getElementById('ta');
+			ta.value = '';
+		};
+	</script>
+</head>
+
+<body>
+	<h3>AJax gogo</h3>
+	<br>
+	<textarea rows='20' cols='100' id='ta'></textarea>
+	<br>
+	<input type='button' value='서버로가자' onclick='server()'>
+	<input type='button' value='초기화' onclick='clear()'>
+</body>

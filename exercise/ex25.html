@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>HELLO</title>
+	<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+	<input type="text" id="irum" value="평강공주님! 보세요">
+	<div id="div1"></div>
+	<div id="div2">
+		<ul>
+			<li id="li3">바보</li>
+			<li id="li4">온달</li>
+			<ul>
+				<li id="li5">멋지다</li>
+			</ul>
+		</ul>
+	</div>
+	<!-- 
+		getter / setter : text() / text(arg)
+						: html() / html(arg)
+						: val()  / val(arg) <= input에서
+	-->
+	<script>
+		$(() => {
+			let div1 = document.getElementById("div1");	// dom 접근
+			div1.innerHTML = "<h2>러브라인</h2>";	// 동적변경 div1 id 내용 변경
+			//	domㅇ으로 넣은 '러브라인' 글자를 jQuery로 있는것 나오게 해서 출력시킴
+			alert($("#div1").html());	// tag get 만일 text() 이면 글자만 get
+			//	div1 id의 현재내용 출력, 인자가 있으면 set
+			$("#div2 #li3").text("평강공주").css("color", "red");
+			$("#div2 #li5").html("<h3>결혼해! 결혼해!</h3>");
+			$("*").css("color", "blue");
+			alert($("#irum").val());
+			$("#irum").val("소개합니다...");
+		});
+	</script>
+</body>
+
+</html>

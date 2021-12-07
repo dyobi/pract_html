@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>HELLO</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+	<h1>우리 건물에는 햄버거 레몬 샌드위치가 있습니다~</h1>
+	<img src="../img/burger.jpg" width=180 height=160 id=burger>
+	<img src="../img/lemon.jpg" width=180 height=160 id=lemon>
+	<img src="../img/sandwich.jpg" width=180 height=160 id=sandwich>
+
+	<script>
+		$(() => {
+			setInterval(() => {
+				$("img").first().appendTo("body");
+			}, 3000);
+		});
+	</script>
+</body>
+
+</html>

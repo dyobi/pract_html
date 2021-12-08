@@ -31,7 +31,9 @@
 		const server = () => {
 			xhr = getXHR();
 			xhr.onreadystatechange = callback;
-			xhr.open('get', '../src/kaja.jsp', true);
+			xhr.open('get', '../src/kajaParam.jsp?name=' + encodeURIComponent('지호'), true);
+			// xhr.open('get', '../src/kajaParam.jsp?name=지호', true);
+			//	단, UTF-8이면 encodeURIComponent('지호') 하지 않아도 잘 나옴(한글깨지는 경우 때문)
 			xhr.send(null);
 		};
 

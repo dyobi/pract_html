@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<title>UPLOAD</title>
+</head>
+
+<body>
+	<h1>file upload</h1>
+	<form action="./uploadtoserver.jsp" method="post" encrype="multipart/form-data">
+		이름 : <input type="text" name="name"><br><br>
+		파일 : <input type="file" name="file" multiple><br><br>
+		<input type="submit" value="가자업로드"><br><br>
+		<input type="reset" value="취소">
+	</form>
+</body>

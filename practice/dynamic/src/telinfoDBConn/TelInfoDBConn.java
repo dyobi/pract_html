@@ -13,6 +13,6 @@ public class TelInfoDBConn {
 	
 	public TelInfoDBConn() throws ClassNotFoundException, SQLException{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr","hr");
+		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XEPDB1", "hr","hr");
 	}
 }
